@@ -16,8 +16,8 @@ const App = (props) => {
       <div className="src">
         Permanent
       </div>
-      <Rnd
-        className="bg-dark"
+      {/*       <Rnd
+        className="src"
         default={{
           x: 0,
           y: 0,
@@ -26,12 +26,12 @@ const App = (props) => {
         }}
       >
         Rnd
-      </Rnd>
+      </Rnd> */}
       <Rnd
-      className="bg-dark"
+        className="bg-dark"
         size={{ width: state.width, height: state.height }}
         position={{ x: state.x, y: state.y }}
-        onDragStop={(e, d) => {setState({ x: d.x, y: d.y }) }}
+        onDragStop={(e, d) => { setState({ x: d.x, y: d.y }) }}
         onResizeStop={(e, direction, ref, delta, position) => {
           setState({
             width: ref.style.width,
@@ -41,7 +41,7 @@ const App = (props) => {
         }}
       >
         001
-</Rnd>
+      </Rnd>
     </div>
   );
 }

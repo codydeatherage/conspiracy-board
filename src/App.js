@@ -1,8 +1,9 @@
 import './App.css';
-import { Rnd } from 'react-rnd'
+import BoardItem from './components/BoardItem'
 import { useState } from 'react'
 
 const App = (props) => {
+  const [children, changeChildren] = useState(0);
   const [state, setState] = useState({
     width: 200,
     height: 200,
@@ -10,40 +11,31 @@ const App = (props) => {
     y: 0
   });
 
+const onAddChild = () => {
+  changeChildren(children + 1);
+}
 
+
+const spawnBox = () => {
   return (
-    <div className="layoutRoot">
-      <div className="src">
-        Permanent
-      </div>
-      {/*       <Rnd
-        className="src"
-        default={{
-          x: 0,
-          y: 0,
-          width: 320,
-          height: 200,
-        }}
-      >
-        Rnd
-      </Rnd> */}
-      <Rnd
-        className="bg-dark"
-        size={{ width: state.width, height: state.height }}
-        position={{ x: state.x, y: state.y }}
-        onDragStop={(e, d) => { setState({ x: d.x, y: d.y }) }}
-        onResizeStop={(e, direction, ref, delta, position) => {
-          setState({
-            width: ref.style.width,
-            height: ref.style.height,
-            ...position,
-          });
-        }}
-      >
-        001
-      </Rnd>
+    <div className="src">
+      Pqwerwefsdfsef
     </div>
-  );
+  )
+}
+let boards = [];
+for(let i = 0; i < children; i++){
+  boards.push(<BoardItem key={i}></BoardItem>);
+}
+
+return (
+  <div className="layoutRoot">
+    <div onClick={onAddChild} className="src">
+      Permanent
+    </div>
+    {boards}
+  </div>
+);
 }
 
 export default App;

@@ -4,38 +4,30 @@ import { useState } from 'react'
 
 const App = (props) => {
   const [children, changeChildren] = useState(0);
-  const [state, setState] = useState({
-    width: 200,
-    height: 200,
-    x: 0,
-    y: 0
-  });
 
-const onAddChild = () => {
-  changeChildren(children + 1);
-}
+  const onAddChild = () => {
+    changeChildren(children + 1);
+  }
 
+  let boards = [];
+  for (let i = 0; i < children; i++) {
+    boards.push(<BoardItem key={i}></BoardItem>);
+  }
 
-const spawnBox = () => {
   return (
-    <div className="src">
-      Pqwerwefsdfsef
-    </div>
-  )
-}
-let boards = [];
-for(let i = 0; i < children; i++){
-  boards.push(<BoardItem key={i}></BoardItem>);
-}
+    <div>
+      <div className="layoutRoot">
+        <div onClick={onAddChild} className="src">
+          Permanent
+        </div>
 
-return (
-  <div className="layoutRoot">
-    <div onClick={onAddChild} className="src">
-      Permanent
+
+      </div>
+      <div className="card">
+        {boards}
+      </div>
     </div>
-    {boards}
-  </div>
-);
+  );
 }
 
 export default App;

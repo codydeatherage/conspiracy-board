@@ -17,8 +17,8 @@ return (
       className="bg-dark"
       size={{ width: state.width, height: state.height }}
       position={{ x: state.x, y: state.y }}
-      onDragStop={(e, d) => { setState({ x: d.x, y: d.y }) }}
-      onResizeStop={(e, direction, ref, delta, position) => {
+      onDragStop={(d) => { setState({ x: d.x, y: d.y }) }}
+      onResizeStop={(ref, position) => {
         setState({
           width: ref.style.width,
           height: ref.style.height,
@@ -26,7 +26,8 @@ return (
         });
       }}
     >
-      001
+      BOXBOXBOXOBOXBOX
+      
       </Rnd>
   </div>
 );

@@ -2,7 +2,7 @@ import './App.css';
 import BoardItem from './components/BoardItem'
 import { useState } from 'react'
 
-const App = (props) => {
+const App = props => {
   const [children, changeChildren] = useState(0);
 
   const onAddChild = () => {
@@ -20,8 +20,6 @@ const App = (props) => {
         <div onClick={onAddChild} className="src">
           Permanent
         </div>
-
-
       </div>
       <div className="card">
         {boards}

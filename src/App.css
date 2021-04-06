@@ -9,6 +9,9 @@
   width: 200px;
 }
 
+.border-white{
+  border: 2px solid white;
+}
 .bg-dark{
   background-color: rgba(209, 205, 98, 0.493);
 }

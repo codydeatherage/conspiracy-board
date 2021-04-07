@@ -34,17 +34,9 @@ const BoardItem = props => {
           });
         }}
       >
-        001
-      <InnerRnd
-        onChange={onFileChange}
-        file={selectedFile}
-        info={state}
-      >
-          <input type="file" onChange={onFileChange} />
-          {selectedFile ? <img className="board-img" src={selectedFile}></img>:null}
-      </InnerRnd>
-        {/*       <input type="file" onChange={onFileChange} />
-      {selectedFile ? <img className="board-img" src={selectedFile}></img> : null} */}
+        {props.amt}
+      {selectedFile ? null: <input type="file" onChange={onFileChange} />}
+      {selectedFile ? <img className="board-img" src={selectedFile}></img> : null}
       </Rnd>
     </div>
   );

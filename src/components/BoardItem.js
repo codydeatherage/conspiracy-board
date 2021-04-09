@@ -1,6 +1,5 @@
 import { Rnd } from 'react-rnd'
 import { useState } from 'react'
-import InnerRnd from './InnerRnd'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BoardItem = props => {
@@ -12,9 +11,9 @@ const BoardItem = props => {
     y: 0
   });
 
-  const onFileChange = async e => {
+  const onFileChange = e => {
     if (e.target.files[0].type === 'image/png') {
-      await changeFile(URL.createObjectURL(e.target.files[0]));
+      changeFile(URL.createObjectURL(e.target.files[0]));
       console.log(e.target.files[0]);
     }
   }
@@ -34,7 +33,7 @@ const BoardItem = props => {
           });
         }}
       >
-        {props.amt}
+      {props.amt}
       {selectedFile ? null: <input type="file" onChange={onFileChange} />}
       {selectedFile ? <img className="board-img" src={selectedFile}></img> : null}
       </Rnd>

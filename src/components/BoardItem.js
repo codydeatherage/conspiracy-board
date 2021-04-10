@@ -1,12 +1,15 @@
 import { Rnd } from 'react-rnd'
 import { useState } from 'react'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(faCoffee);
 const BoardItem = props => {
   const [selectedFile, changeFile] = useState(null);
   const [state, setState] = useState({
-    width: 200,
-    height: 200,
+    width: 100,
+    height: 100,
     x: 0,
     y: 0
   });
@@ -19,7 +22,7 @@ const BoardItem = props => {
   }
 
   return (
-    <div className=" card card-body layoutRoot">
+    <>
       <Rnd
         className="bg-dark"
         size={{ width: state.width, height: state.height }}
@@ -33,11 +36,19 @@ const BoardItem = props => {
           });
         }}
       >
-      {props.amt}
-      {selectedFile ? null: <input type="file" onChange={onFileChange} />}
+      {selectedFile ? null:
+      <> 
+        <input type="file"  onChange={onFileChange} 
+        >
+        </input>
+        <FontAwesomeIcon icon={["fas", "coffee"]} />
+      </>
+        
+      }
       {selectedFile ? <img className="board-img" src={selectedFile}></img> : null}
       </Rnd>
-    </div>
+      {/* {props.amt} */}
+    </>
   );
 }
 

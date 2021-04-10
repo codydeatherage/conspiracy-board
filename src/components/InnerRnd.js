@@ -33,9 +33,9 @@ const InnerRnd = props => {
                     });
                 }}
             >
-                Inner
+                Inner{/* 
               <input type="file" onChange={onFileChange} /> 
-                {props.file ?  <img className="board-img" src={props.file}></img>: null}  
+                {props.file ?  <img className="board-img" src={props.file}></img>: null}   */}
             </Rnd>
         </div>
     )

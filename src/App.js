@@ -1,4 +1,5 @@
 import './App.css';
+import Board from './components/Board'
 import BoardItem from './components/BoardItem'
 import { useState } from 'react'
 
@@ -18,14 +19,14 @@ const App = props => {
 
   return (
     <div>
-      <div className="layoutRoot">
+      <div className="card">
         <div onClick={onAddChild} className="src">
           Permanent
         </div>
       </div>
-      <div className="card">
-        {boards}
-      </div>
+    {/*   <div className=" board-main"> */}
+        <Board tiles={boards}></Board>
+      {/* </div> */}
     </div>
   );
 }

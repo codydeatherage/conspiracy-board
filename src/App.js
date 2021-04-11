@@ -1,6 +1,7 @@
 import './App.css';
 import Board from './components/Board'
 import BoardItem from './components/BoardItem'
+import StringAnim from './components/StringAnim'
 import { useState } from 'react'
 
 const App = props => {
@@ -23,6 +24,7 @@ const App = props => {
         <div onClick={onAddChild} className="src">
           Permanent
         </div>
+        <StringAnim></StringAnim>
       </div>
     {/*   <div className=" board-main"> */}
         <Board tiles={boards}></Board>

@@ -18,11 +18,26 @@
   background-color: rgba(209, 205, 98, 0.493);
 }
 
+.dining{
+  transform: scale(1.0);
+  height: auto;
+  width: auto;
+  color: green;/* 
+  background-color: rgb(235, 4, 43); */
+  border: 1px solid black;
+}
+
+.dining:hover{
+  filter: grayscale(100%) sepia(100%);
+}
 .board-main{
   height: 70vh;
   width: 95%;
   border: 2px solid black;
   background-color: tan;
+  background-repeat:no-repeat ;
+  background-size: contain;
+  background-image: url('./components/_attwio1.jpg');
 }
 
 .board-img{ 

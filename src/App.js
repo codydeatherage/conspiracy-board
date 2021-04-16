@@ -4,7 +4,8 @@ import BoardItem from './components/BoardItem'
 import StringAnim from './components/StringAnim'
 import Canvas from './components/Canvas'
 import { useState } from 'react'
-import dining2 from './assets/dining2.svg'
+import dining3 from './assets/dining3.svg'
+import entrance from './assets/entrance.svg'
 const App = props => {
   const [children, changeChildren] = useState(0);
   const [amt, changeAmt] = useState(0);
@@ -41,8 +42,10 @@ const App = props => {
         {}{/* 
         <Canvas draw={draw}></Canvas> */}
       </div>
-      
-      <img className="dining" src={dining2} alt=""></img>
+      <div className="house">
+        <img className="room-tile dining" src={dining3} alt=""></img>
+        <img className="room-tile" src={entrance} alt=""></img>
+      </div>
     {/*   <div className=" board-main"> */}
         <Board tiles={boards}></Board>
       {/* </div> */}

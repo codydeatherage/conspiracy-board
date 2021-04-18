@@ -6,6 +6,8 @@ import Canvas from './components/Canvas'
 import { useState } from 'react'
 import dining3 from './assets/dining3.svg'
 import entrance from './assets/entrance.svg'
+import house from './assets/house.svg'
+
 const App = props => {
   const [children, changeChildren] = useState(0);
   const [amt, changeAmt] = useState(0);
@@ -43,8 +45,8 @@ const App = props => {
         <Canvas draw={draw}></Canvas> */}
       </div>
       <div className="house">
-        <img className="room-tile dining" src={dining3} alt=""></img>
-        <img className="room-tile" src={entrance} alt=""></img>
+        {/* <img className="room-tile dining" src={dining3} alt=""></img> */}
+        <img className="room-tile" src={house} alt=""></img>
       </div>
     {/*   <div className=" board-main"> */}
         <Board tiles={boards}></Board>

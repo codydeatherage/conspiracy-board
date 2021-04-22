@@ -7,6 +7,7 @@ import { useState } from 'react'
 import dining3 from './assets/dining3.svg'
 import entrance from './assets/entrance.svg'
 import house from './assets/house.svg'
+import frame from './assets/frame.svg'
 
 const App = props => {
   const [children, changeChildren] = useState(0);
@@ -47,6 +48,7 @@ const App = props => {
       <div className="house">
         {/* <img className="room-tile dining" src={dining3} alt=""></img> */}
         <img className="room-tile" src={house} alt=""></img>
+        <img className="room-tile" src={frame} alt=""></img>
       </div>
     {/*   <div className=" board-main"> */}
         <Board tiles={boards}></Board>
